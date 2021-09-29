@@ -21,8 +21,6 @@ function LED1_Off(){
 
 
 
-
-
 // Create a client instance
   //client = new Paho.MQTT.Client("postman.cloudmqtt.com", 14970);
   
@@ -73,8 +71,24 @@ function LED1_Off(){
   function onMessageArrived(message) {
     console.log("onMessageArrived:"+message.payloadString);
     var MensajeRecibido=message.payloadString;
-    var la=message.payloadString.split("-");
+    //var la=message.payloadString.split("-");
     document.getElementById("sensor").innerHTML=la[0];
     document.getElementById("sensor1").innerHTML=la[1];
 
   }
+
+function leerArchivo(e) {
+  var archivo = e.target.files[0];
+
+  var lector = new FileReader();
+  lector.onload = function(e) {
+    var contenido = e.target.result;
+    mostrarContenido(contenido);
+  };
+  lector.readAsText(archivo);
+}
+
+function mostrarContenido(contenido) {
+  document.getElementById('contenido-archivo').innerHTML=contenido;
+}
+document.getElementById('file-input').addEventListener('change', leerArchivo, false);
