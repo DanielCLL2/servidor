@@ -16,12 +16,24 @@
 
 	<h1 style="margin-bottom: 10px; background-color: gray;">--Sistemas Embebidos--</h1>
 	<img id="imagen" src="https://d1yjjnpx0p53s8.cloudfront.net/logounach-01.jpg" alt="user">
-	<h1 style="margin-bottom: 10px; background-color: gray;">Sensor 1:</h1><h1 style="margin-bottom: 10px; background-color: whitesmoke;" id="sensor">--</h1>
-	<h1 style="margin-bottom: 10px; background-color: gray;">Sensor 2:</h1><h1 style="margin-bottom: 10px; background-color: whitesmoke;" id="sensor1">--</h1>
-	<button style="background-color:green; border-radius: 20px; padding: 20px; color:white" id = 'LED1On'type="button" onclick="LED1_On();">
-	LED1 ON!</button>
+
+	<h1 style="margin-bottom: 10px; background-color: gray;">Sensor 1 - Sensor 2</h1><h1 style="margin-bottom: 10px; background-color: whitesmoke;" id="sensor">--</h1>
+	<h1 style="margin-bottom: 10px; background-color: whitesmoke;" id="sensor1">--</h1>
+
+	<button style="background-color:green; border-radius: 20px; padding: 20px; color:white" id = 'LED1On'type="button" onclick="LED1_On();">Sensor 1</button>
 	<button style="background-color:red; border-radius: 20px; padding: 20px; color:white" id = 'LED1Off' type="button" onclick="LED1_Off();">
-	LED1_OFF!</button>
+	Sensor 2</button>
+
+	<center>
+  	<input style="color: black; font-size: 25px;" type="file" id="file-input" />
+  	<h1 style="color: black;" >Historial:</h1>
+  	<pre id="contenido-archivo" style="color: black; font-size: 25px;" ></pre>
+	</center>
+
+
+
+
+
 </center>
 </div>
 
